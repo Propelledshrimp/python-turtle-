@@ -1,12 +1,19 @@
 from turtle import * 
 import math
-import random
+import random  
 
 tatem = Turtle()
 veronica = Turtle()
 hailey = Turtle()
 
 all_turtles = [ tatem, veronica, hailey]
+
+green_hill = Screen()
+green_hill.screensize(600,219)
+green_hill.title("Turtle Plains")
+
+green_hill.bgpic() 
+green_hill.bgpic("turtlebackground.png")
 
 
 def draw_star(t, x, y , points, line, fill):
