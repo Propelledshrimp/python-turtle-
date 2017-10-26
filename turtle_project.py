@@ -10,7 +10,14 @@ tatem.shape("turtle")
 veronica.shape("turtle")
 hailey.shape("turtle") 
 
-all_turtles = [ tatem, veronica, hailey]
+all_turtles = [veronica, hailey]
+
+stalker_turtles = True
+
+veronica.penup() 
+veronica.goto(-200,0)
+hailey.penup() 
+hailey.goto(-200, 50)
 
 green_hill = Screen()
 green_hill.screensize(2000,2000)
@@ -46,8 +53,9 @@ def right_arrow():
     tatem.right(45)
 def left_arrow():
     tatem.penup() 
-    tatem.left(45)  
-    
+    tatem.left(45)
+
+
 onkeypress(up_arrow, "Up")
 onkeypress(down_arrow, "Down")
 onkeypress(left_arrow, "Left")
@@ -61,4 +69,12 @@ listen()
 
 draw_star(god, 200, 200, 36 , 'orange' , 'yellow')
 
- 
+while True:
+    hailey.penup()
+    veronica.penup()
+    h = hailey.towards(tatem)
+    hailey.setheading(h)
+    d = veronica.towards(tatem)
+    veronica.setheading(d)
+    hailey.fd(20)
+    veronica.fd(20) 
