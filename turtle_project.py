@@ -41,7 +41,8 @@ def draw_star(t, x, y , points, line, fill):
         t.forward(200)
         t.left(turn)
     t.end_fill()
-    t.hideturtle() 
+    t.hideturtle()
+    
 def up_arrow():
     tatem.penup()
     tatem.fd(100)
@@ -76,5 +77,12 @@ while True:
     hailey.setheading(h)
     d = veronica.towards(tatem)
     veronica.setheading(d)
-    hailey.fd(20)
-    veronica.fd(20) 
+    hailey.fd(10)
+    veronica.fd(10) 
+
+for t in all_turtles:
+    if veronica.position and hailey.position == tatem.position:
+        stalker_turtles = False
+    while False:
+        draw_star(veronica, tatem.x + 100, tatem.y +200, 'red', 'blue') 
+        
